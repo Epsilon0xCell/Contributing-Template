@@ -1,3 +1,5 @@
+![Banner](banner.png)
+
 # CONTRIBUTING
 My contributing.md file
 
