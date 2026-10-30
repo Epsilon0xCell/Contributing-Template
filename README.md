@@ -1,6 +1,6 @@
 ![Banner](banner.png)
 
-# CONTRIBUTING
+# Contributing-Template
 My contributing.md file
 
 https://generator.contributing.md
