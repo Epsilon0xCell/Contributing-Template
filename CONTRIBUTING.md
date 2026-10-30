@@ -28,7 +28,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the
+This project and everyone participating in it is governed by
 the project code of conduct (no CODE_OF_CONDUCT.md file is included in this template repo; add one before adopting this guide).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to the project maintainer.

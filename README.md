@@ -17,4 +17,6 @@ Copy `CONTRIBUTING.md` into your project, then fill in the template slots before
 
 Four `TODO` comment blocks are left intentionally blank in the template: first code contribution setup, improving the documentation, commit-message styleguide details, and joining the project team. Those are fill-in points for the adopting project, not oversights, and they are left as TODOs rather than filled with invented project details. The table of contents anchors were checked against the headings and all resolve to sections that exist in the file.
 
+One more inherited quirk to check when adopting: the question, bug, and enhancement sections link to root-relative `/issues` and `/issues/new` paths, as the generator wrote them. On GitHub those resolve against the github.com root (the signed-in reader's own issue pages), not against the adopting repository, so replace them with the project's own issue URLs. They are documented here rather than rewritten, because the right target is the adopting project's address, which this template cannot know. A doubled word left in the code-of-conduct sentence by an earlier placeholder fix ("governed by the the project code of conduct") was also corrected in the deep pass.
+
 Files: `CONTRIBUTING.md`, `LICENSE`, `logo.png`, `banner.png`.
