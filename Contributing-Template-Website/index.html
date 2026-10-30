@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contributing-Template - A Packet To Copy</title>
+<!-- pages-campaign site for Epsilon0xCell/Contributing-Template; source of truth: Contributing-Template-Website/ on the default branch -->
+<!-- I styled this as the front sheet of a packet because the repo is a packet. You take the sheet, you copy the file, you fill the blanks. -->
+<style>
+/* I used a flat packet sheet with hard borders and a perforated edge line. No hero tricks. The first thing a packet tells you is what is inside it. */
+*{box-sizing:border-box} body{margin:0;background:#d9c9a3;color:#24231f;font-family:"Courier New",monospace;line-height:1.55}
+.sheet{max-width:860px;margin:28px auto 50px;background:#fffef8;border:2px solid #24231f;box-shadow:10px 10px 0 #24231f;padding:0}
+.head{border-bottom:2px solid #24231f;padding:20px 30px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.packet-no{border:2px solid #a11c1c;color:#a11c1c;padding:6px 12px;font-weight:bold;letter-spacing:.12em;transform:rotate(-2deg)}
+.body{padding:28px 30px 36px}
+h1{font-family:Arial,sans-serif;font-size:38px;line-height:1.05;margin:8px 0}
+.hero{width:100%;border:1px solid #24231f;display:block;margin:18px 0}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.badges img{height:20px}
+.label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;border-top:1px dashed #24231f;padding-top:16px;margin-top:26px}
+p,li{font-size:15px}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid #24231f;padding:9px 11px;text-align:left;font-size:14px;vertical-align:top}
+th{background:#24231f;color:#fffef8;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.instruction{background:#24231f;color:#fffef8;padding:20px 22px;font-family:Arial,sans-serif}
+.instruction strong{font-size:22px;display:block;margin-bottom:6px}
+.chip{display:inline-block;border:1px solid #24231f;padding:3px 9px;font-size:12px;margin:3px}
+a{color:#a11c1c}
+footer{max-width:860px;margin:0 auto 36px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="head"><div><div style="letter-spacing:.2em;font-size:12px">FRONT SHEET - DO NOT FILE, COPY FIRST</div><div style="font-size:12px;margin-top:6px">For: any project that needs a contributing guide</div></div><div class="packet-no">COPY ME</div></div>
+<div class="body">
+<img class="hero" src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/banner.png" alt="Contributing-Template banner">
+<h1>Contributing-Template</h1>
+<p>A ready-to-copy contributing guide (CONTRIBUTING.md), generated with generator.contributing.md, for use as the contributing file of another project.</p>
+<div class="badges">
+<img src="https://img.shields.io/github/stars/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Stars">
+<img src="https://img.shields.io/github/forks/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Forks">
+<img src="https://img.shields.io/github/last-commit/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Last commit">
+<img src="https://img.shields.io/github/languages/top/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Top language">
+<img src="https://img.shields.io/github/repo-size/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Repo size">
+<img src="https://img.shields.io/github/license/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="License">
+</div>
+
+<div class="label">What this is, from me</div>
+<p>I keep this repo so I do not have to write a contributing guide from scratch every time. Plainly: this repo's job is to be copied. It is itself a template repo, and its contents are contribution templates for other projects.</p>
+<p>The guide in here was generated with generator.contributing.md, and its Attribution section credits contributing-gen. I did not write that template text from nothing, and this page does not claim I did. My work on it was keeping a copy, fixing the broken spots in it, and writing down what an adopter still has to fill in.</p>
+<p>If you take one thing from this sheet, take the instruction in the black box below. Everything else on this page is the inventory and the warnings.</p>
+
+<div class="instruction"><strong>The one instruction that matters</strong>Copy CONTRIBUTING.md into your project, then fill in the template slots before you publish it. Do not publish it as-is.</div>
+
+<div class="label">Contents of this packet</div>
+<!-- I listed the real files by name because a packet front sheet that does not name its contents is useless. -->
+<table>
+<tr><th>File</th><th>What it is</th></tr>
+<tr><td>CONTRIBUTING.md</td><td>The guide itself. Code of conduct, asking questions, reporting bugs, suggesting enhancements, first code contributions, documentation, commit message styleguides, and joining the project team, with a table of contents linking to each section.</td></tr>
+<tr><td>README.md</td><td>My notes on how to use the template, what was fixed, and what is still left to fill.</td></tr>
+<tr><td>LICENSE</td><td>The license file shipped in this repo.</td></tr>
+<tr><td>banner.png / logo.png</td><td>The banner and logo in the repo root. The banner at the top of this sheet is that banner.png.</td></tr>
+</table>
+
+<div class="label">Who this is for</div>
+<p>Anyone starting a project who wants a contributing guide in place on day one, and anyone who would rather fill in blanks than stare at an empty file. It fits a project that uses GitHub issues and wants bug reports and enhancement suggestions in a set order.</p>
+
+<div class="label">Blanks left blank on purpose</div>
+<p>Four TODO comment blocks stay blank in the template: first code contribution setup, improving the documentation, commit message styleguide details, and joining the project team. Those are fill-in points for the adopting project, not oversights. I left them as TODOs rather than filling them with invented project details.</p>
+
+<div class="label">Warnings I already wrote down in the README</div>
+<ul>
+<li>No CODE_OF_CONDUCT.md file is included in this template repo. Add one before adopting the guide. The old link to a missing file is fixed, and the empty contact spots now read the project maintainer instead of an invented address.</li>
+<li>Three documentation links that pointed nowhere now link to README.md in this repo. Point them at your own documentation when you adopt it.</li>
+<li>The question, bug, and enhancement sections use root-relative /issues and /issues/new links, as the generator wrote them. On GitHub those go to the github.com root, not to your repo. Replace them with your own issue URLs.</li>
+</ul>
+
+<div class="label">Packet tags</div>
+<p><span class="chip">CONTRIBUTING.md</span><span class="chip">Markdown template</span><span class="chip">generator.contributing.md</span><span class="chip">contributing-gen</span><span class="chip">GitHub issues</span></p>
+
+<p><a href="https://github.com/Epsilon0xCell/Contributing-Template">Open the packet in the repo</a> &nbsp;|&nbsp; <a href="https://github.com/Epsilon0xCell">My GitHub profile</a></p>
+</div>
+</div>
+<footer><span>Built by Epsilon0xCell</span><span>Front sheet ends. The file you want is CONTRIBUTING.md.</span></footer>
+</body>
+</html>
