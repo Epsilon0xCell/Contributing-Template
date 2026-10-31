@@ -3,83 +3,132 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contributing-Template - A Packet To Copy</title>
+<title>Contributing-Template: The Annotated Blank</title>
 <!-- pages-campaign site for Epsilon0xCell/Contributing-Template; source of truth: Contributing-Template-Website/ on the default branch -->
-<!-- I styled this as the front sheet of a packet because the repo is a packet. You take the sheet, you copy the file, you fill the blanks. -->
 <style>
-/* I used a flat packet sheet with hard borders and a perforated edge line. No hero tricks. The first thing a packet tells you is what is inside it. */
-*{box-sizing:border-box} body{margin:0;background:#d9c9a3;color:#24231f;font-family:"Courier New",monospace;line-height:1.55}
-.sheet{max-width:860px;margin:28px auto 50px;background:#fffef8;border:2px solid #24231f;box-shadow:10px 10px 0 #24231f;padding:0}
-.head{border-bottom:2px solid #24231f;padding:20px 30px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.packet-no{border:2px solid #a11c1c;color:#a11c1c;padding:6px 12px;font-weight:bold;letter-spacing:.12em;transform:rotate(-2deg)}
-.body{padding:28px 30px 36px}
-h1{font-family:Arial,sans-serif;font-size:38px;line-height:1.05;margin:8px 0}
-.hero{width:100%;border:1px solid #24231f;display:block;margin:18px 0}
-.badges{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.badges img{height:20px}
-.label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;border-top:1px dashed #24231f;padding-top:16px;margin-top:26px}
-p,li{font-size:15px}
-table{width:100%;border-collapse:collapse;margin:12px 0}
-th,td{border:1px solid #24231f;padding:9px 11px;text-align:left;font-size:14px;vertical-align:top}
-th{background:#24231f;color:#fffef8;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.instruction{background:#24231f;color:#fffef8;padding:20px 22px;font-family:Arial,sans-serif}
-.instruction strong{font-size:22px;display:block;margin-bottom:6px}
-.chip{display:inline-block;border:1px solid #24231f;padding:3px 9px;font-size:12px;margin:3px}
-a{color:#a11c1c}
-footer{max-width:860px;margin:0 auto 36px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* I built this page as a form under annotation: ruled lines for the guide, a tinted margin column for my notes, so the two voices never blur. */
+*{box-sizing:border-box}
+body{margin:0;background:#ece7da;color:#1e1c17;font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+a{color:#7a1f1f}
+header,main,footer{max-width:1060px;margin:0 auto;padding:0 22px}
+header{padding-top:34px}
+.kicker{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:3px double #1e1c17;padding-bottom:10px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+h1{font-size:40px;line-height:1.08;margin:20px 0 10px;font-weight:normal}
+h2{font-family:Arial,sans-serif;font-size:19px;margin:38px 0 10px;border-bottom:2px solid #1e1c17;padding-bottom:6px}
+.lede{font-size:18px;max-width:44em}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
+.badges img{height:20px}
+.banner{width:100%;display:block;border:1px solid #1e1c17;margin:14px 0}
+.logo{width:110px;height:auto;float:right;margin:4px 0 10px 18px;border:1px solid #1e1c17;background:#fff}
+.note{font-family:"Segoe Print","Bradley Hand",cursive,Georgia,serif;background:#fff3b8;border-left:4px solid #c9a227;padding:10px 14px;font-size:15px}
+.note strong{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+.form{border:2px solid #1e1c17;background:#fdfcf7}
+.row{display:grid;grid-template-columns:1fr 300px;border-bottom:1px solid #b9b2a0}
+.row:last-child{border-bottom:none}
+.field{padding:16px 18px;border-right:1px solid #b9b2a0}
+.field .num{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.16em;color:#7a1f1f}
+.field h3{margin:3px 0 6px;font-size:20px;font-weight:normal}
+.status{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.status.written{color:#2e5d2e}.status.blank{color:#7a1f1f}
+.blanklines{margin-top:12px}
+.blanklines i{display:block;height:22px;border-bottom:1px solid #8f8875}
+.blanklines i+i{margin-top:8px}
+.margin{padding:16px;background:#fff8cf;font-family:"Segoe Print","Bradley Hand",cursive,Georgia,serif;font-size:14.5px;border-left:3px solid #c9a227}
+.margin::before{content:"My note";display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7a6a1f;margin-bottom:4px}
+@media(max-width:720px){.row{grid-template-columns:1fr}.field{border-right:none}.margin{border-left:none;border-top:3px solid #c9a227}}
+figure{margin:18px 0}
+figure img{width:100%;display:block;border:1px solid #1e1c17;background:#fff}
+figcaption{font-size:13.5px;color:#4a463c;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+pre{background:#1e1c17;color:#f2ecd9;padding:16px 18px;overflow-x:auto;font-size:13.5px;line-height:1.55}
+pre .ln{color:#9a927a;user-select:none}
+.caplabel{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7a1f1f;margin-top:22px}
+.todo-blank:hover .blanklabel{text-decoration:underline}
+footer{border-top:3px double #1e1c17;margin-top:44px;padding-top:16px;padding-bottom:34px;font-size:14px}
+.js .row,.js figure,.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.js .row.in,.js figure.in,.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+.js .row,.js figure,.js .reveal{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
-<div class="sheet">
-<div class="head"><div><div style="letter-spacing:.2em;font-size:12px">FRONT SHEET - DO NOT FILE, COPY FIRST</div><div style="font-size:12px;margin-top:6px">For: any project that needs a contributing guide</div></div><div class="packet-no">COPY ME</div></div>
-<div class="body">
-<img class="hero" src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/banner.png" alt="Contributing-Template banner">
-<h1>Contributing-Template</h1>
-<p>A ready-to-copy contributing guide (CONTRIBUTING.md), generated with generator.contributing.md, for use as the contributing file of another project.</p>
+<header>
+<div class="kicker"><span>Form: CONTRIBUTING.md, as found</span><span>Annotations: mine, in the margin</span></div>
+<img class="logo" src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/logo.png" alt="Contributing-Template logo">
+<h1>Contributing-Template: The Annotated Blank</h1>
+<p class="lede">I keep this repository for one file: <code>CONTRIBUTING.md</code>, a ready to copy contributing guide generated with <a href="https://generator.contributing.md">generator.contributing.md</a>. An adopter copies it into another project and fills in the slots. On this page I show it the way an adopter meets it, as a ruled form with every slot and TODO marked in my margin, and nothing filled in with invented details.</p>
 <div class="badges">
-<img src="https://img.shields.io/github/stars/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Stars">
-<img src="https://img.shields.io/github/forks/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Forks">
-<img src="https://img.shields.io/github/last-commit/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Last commit">
-<img src="https://img.shields.io/github/languages/top/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Top language">
-<img src="https://img.shields.io/github/repo-size/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="Repo size">
-<img src="https://img.shields.io/github/license/Epsilon0xCell/Contributing-Template?style=flat&color=a11c1c&labelColor=24231f" alt="License">
+<img src="https://img.shields.io/github/stars/Epsilon0xCell/Contributing-Template" alt="GitHub stars">
+<img src="https://img.shields.io/github/forks/Epsilon0xCell/Contributing-Template" alt="GitHub forks">
+<img src="https://img.shields.io/github/last-commit/Epsilon0xCell/Contributing-Template" alt="Last commit">
+<img src="https://img.shields.io/github/languages/top/Epsilon0xCell/Contributing-Template" alt="Top language">
+<img src="https://img.shields.io/github/repo-size/Epsilon0xCell/Contributing-Template" alt="Repository size">
+<img src="https://img.shields.io/github/license/Epsilon0xCell/Contributing-Template" alt="License, GPL-3.0">
 </div>
-
-<div class="label">What this is, from me</div>
-<p>I keep this repo so I do not have to write a contributing guide from scratch every time. Plainly: this repo's job is to be copied. It is itself a template repo, and its contents are contribution templates for other projects.</p>
-<p>The guide in here was generated with generator.contributing.md, and its Attribution section credits contributing-gen. I did not write that template text from nothing, and this page does not claim I did. My work on it was keeping a copy, fixing the broken spots in it, and writing down what an adopter still has to fill in.</p>
-<p>If you take one thing from this sheet, take the instruction in the black box below. Everything else on this page is the inventory and the warnings.</p>
-
-<div class="instruction"><strong>The one instruction that matters</strong>Copy CONTRIBUTING.md into your project, then fill in the template slots before you publish it. Do not publish it as-is.</div>
-
-<div class="label">Contents of this packet</div>
-<!-- I listed the real files by name because a packet front sheet that does not name its contents is useless. -->
-<table>
-<tr><th>File</th><th>What it is</th></tr>
-<tr><td>CONTRIBUTING.md</td><td>The guide itself. Code of conduct, asking questions, reporting bugs, suggesting enhancements, first code contributions, documentation, commit message styleguides, and joining the project team, with a table of contents linking to each section.</td></tr>
-<tr><td>README.md</td><td>My notes on how to use the template, what was fixed, and what is still left to fill.</td></tr>
-<tr><td>LICENSE</td><td>The license file shipped in this repo.</td></tr>
-<tr><td>banner.png / logo.png</td><td>The banner and logo in the repo root. The banner at the top of this sheet is that banner.png.</td></tr>
-</table>
-
-<div class="label">Who this is for</div>
-<p>Anyone starting a project who wants a contributing guide in place on day one, and anyone who would rather fill in blanks than stare at an empty file. It fits a project that uses GitHub issues and wants bug reports and enhancement suggestions in a set order.</p>
-
-<div class="label">Blanks left blank on purpose</div>
-<p>Four TODO comment blocks stay blank in the template: first code contribution setup, improving the documentation, commit message styleguide details, and joining the project team. Those are fill-in points for the adopting project, not oversights. I left them as TODOs rather than filling them with invented project details.</p>
-
-<div class="label">Warnings I already wrote down in the README</div>
-<ul>
-<li>No CODE_OF_CONDUCT.md file is included in this template repo. Add one before adopting the guide. The old link to a missing file is fixed, and the empty contact spots now read the project maintainer instead of an invented address.</li>
-<li>Three documentation links that pointed nowhere now link to README.md in this repo. Point them at your own documentation when you adopt it.</li>
-<li>The question, bug, and enhancement sections use root-relative /issues and /issues/new links, as the generator wrote them. On GitHub those go to the github.com root, not to your repo. Replace them with your own issue URLs.</li>
-</ul>
-
-<div class="label">Packet tags</div>
-<p><span class="chip">CONTRIBUTING.md</span><span class="chip">Markdown template</span><span class="chip">generator.contributing.md</span><span class="chip">contributing-gen</span><span class="chip">GitHub issues</span></p>
-
-<p><a href="https://github.com/Epsilon0xCell/Contributing-Template">Open the packet in the repo</a> &nbsp;|&nbsp; <a href="https://github.com/Epsilon0xCell">My GitHub profile</a></p>
+<img class="banner" src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/banner.png" alt="Contributing-Template banner">
+<p class="note"><strong>How to read this page</strong>The left column is the guide itself, section by section, in the order its own table of contents gives. The yellow margin is me. If a line is blank, I left it blank, because the template leaves it blank.</p>
+</header>
+<main>
+<h2>The form, section by section</h2>
+<p>I checked the table of contents against the headings in the file. All ten anchors resolve to sections that exist. Here they are, in that order.</p>
+<div class="form">
+<div class="row"><div class="field"><span class="num">Section 01</span><h3>Code of Conduct</h3><span class="status written">Written in full</span><p>The project and everyone in it is governed by the project code of conduct, and unacceptable behavior is reported to the project maintainer. My capture below shows the exact wording.</p></div><aside class="margin">Fixed in an earlier pass, and I want it visible: this section used to link to a CODE_OF_CONDUCT.md file this repo does not contain. It now says so plainly. See capture 1.</aside></div>
+<div class="row"><div class="field"><span class="num">Section 02</span><h3>I Have a Question</h3><span class="status written">Written in full</span><p>Read the README first, search existing issues, then open an issue with as much context as you can give.</p></div><aside class="margin">Watch the links here. This section points at /issues and /issues/new, which do not land where an adopter expects. I explain that under its own heading below.</aside></div>
+<div class="row"><div class="field"><span class="num">Section 03</span><h3>I Want To Contribute</h3><span class="status written">Written in full</span><p>The umbrella section, opening with a legal notice: by contributing, you agree you authored the content and hold the rights to it.</p></div><aside class="margin">Reporting Bugs and Suggesting Enhancements sit under this heading in the file, and the table of contents lists them on their own. I follow the contents list, so they get their own rows next.</aside></div>
+<div class="row"><div class="field"><span class="num">Section 04</span><h3>Reporting Bugs</h3><span class="status written">Written in full</span><p>Before submitting: confirm the latest version, check the bug tracker, collect a stack trace and version details. Submitting: open an issue, describe expected and actual behavior, give reproduction steps.</p></div><aside class="margin">The security line in this section is where the second maintainer passage lives. Sensitive bugs go by email to the project maintainer, never to the public tracker. See capture 3.</aside></div>
+<div class="row"><div class="field"><span class="num">Section 05</span><h3>Suggesting Enhancements</h3><span class="status written">Written in full</span><p>Search first, then open an issue with a clear title, a step by step description, the current behavior, the behavior you expected, and why it would help most users.</p></div><aside class="margin">This section also links out through /issues, so the same adopter warning applies.</aside></div>
+<div class="row todo-blank"><div class="field"><span class="num">Section 06</span><h3>Your First Code Contribution</h3><span class="status blank blanklabel">TODO, left blank on purpose</span><div class="blanklines" aria-hidden="true"><i></i><i></i><i></i></div></div><aside class="margin">Blank number one of four. The TODO asks about setup of environment, IDE, and getting started instructions. Only the adopting project can answer that, so I left the lines empty. Capture 2 shows this block word for word.</aside></div>
+<div class="row todo-blank"><div class="field"><span class="num">Section 07</span><h3>Improving The Documentation</h3><span class="status blank blanklabel">TODO, left blank on purpose</span><div class="blanklines" aria-hidden="true"><i></i><i></i></div></div><aside class="margin">Blank number two of four. Its TODO reads: Updating, improving and correcting the documentation. The three documentation links elsewhere in the guide now point at README.md in this repo, and an adopter should point them at its own documentation instead.</aside></div>
+<div class="row"><div class="field"><span class="num">Section 08</span><h3>Styleguides</h3><span class="status written">Heading only, holds Commit Messages</span><p>A short parent heading. Its only child is the commit messages section below.</p></div><aside class="margin">I list it because the contents list it. There is no prose under it in the file, and I did not invent any.</aside></div>
+<div class="row todo-blank"><div class="field"><span class="num">Section 09</span><h3>Commit Messages</h3><span class="status blank blanklabel">TODO, left blank on purpose</span><div class="blanklines" aria-hidden="true"><i></i><i></i></div></div><aside class="margin">Blank number three of four, and the emptiest of them: its TODO block holds no prompt text at all, just the comment markers. A commit style is a project decision, so the blank is the honest answer here.</aside></div>
+<div class="row todo-blank"><div class="field"><span class="num">Section 10</span><h3>Join The Project Team</h3><span class="status blank blanklabel">TODO, left blank on purpose</span><div class="blanklines" aria-hidden="true"><i></i><i></i></div></div><aside class="margin">Blank number four of four, a single line TODO with nothing after it. How a team takes new members differs too much between projects for a template to guess.</aside></div>
 </div>
+<h2 class="reveal">The /issues quirk, in my margin</h2>
+<p class="reveal">The question, bug, and enhancement sections link to root relative <code>/issues</code> and <code>/issues/new</code> paths, as the generator wrote them. On GitHub those resolve against the github.com root, the signed in reader's own issue pages, rather than against the adopting repository. If you adopt this guide, replace them with your project's own issue URLs. I documented the quirk instead of rewriting it in the template, because the right target is the adopting project's address, which this template cannot know.</p>
+<h2 class="reveal">Captures, checked against the file</h2>
+<p class="reveal">I copied each passage below directly from CONTRIBUTING.md and checked it line by line. The line numbers are the file's own.</p>
+<p class="caplabel reveal">Capture 1, lines 31 to 34, the code of conduct passage</p>
+<pre class="reveal"><span class="ln">31 </span>This project and everyone participating in it is governed by
+<span class="ln">32 </span>the project code of conduct (no CODE_OF_CONDUCT.md file is included in this template repo; add one before adopting this guide).
+<span class="ln">33 </span>By participating, you are expected to uphold this code. Please report unacceptable behavior
+<span class="ln">34 </span>to the project maintainer.</pre>
+<p class="note reveal"><strong>My note</strong>An earlier fix had left a doubled word in this passage, governed by the the project code of conduct. That was corrected, and the passage above is the corrected text.</p>
+<p class="caplabel reveal">Capture 2, lines 137 to 140, one complete TODO block, intentionally blank</p>
+<pre class="reveal"><span class="ln">137 </span>&lt;!-- TODO
+<span class="ln">138 </span>include Setup of env, IDE and typical getting started instructions?
+<span class="ln">139 </span>
+<span class="ln">140 </span>--&gt;</pre>
+<p class="reveal">This is the TODO under Your First Code Contribution, and I picked it because it is the most representative of the four: a real question the template asks its adopter, left open on purpose.</p>
+<p class="caplabel reveal">Capture 3, line 92, contact reads the project maintainer</p>
+<pre class="reveal"><span class="ln">92 </span>&gt; You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to the project maintainer.</pre>
+<p class="reveal">Two contact spots in this guide once held an empty <code>&lt;&gt;</code> address. Both now read the project maintainer, here and in the code of conduct passage above, instead of an invented address.</p>
+<h2 class="reveal">The visual sheets</h2>
+<p class="reveal">I keep the sheets in Contributing-Template-Visuals/. VISUAL.md describes five sheets. The folder in fact holds six PNG sheets, the five it names plus schematic.png, so I show all six here and note the count difference rather than quietly dropping one. Per VISUAL.md, the sheets were drawn by hand from the files in this repo as they sat on 2026-10-30, on notebook paper with three binder holes down the left side, with no ink inside the hole zones.</p>
+<div class="grid2">
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/architecture.png" alt="Architecture sheet"><figcaption>architecture.png: the put together, in VISUAL.md's words, with the biggest file at the top and the files under it next largest.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/flowchart.png" alt="Flowchart sheet"><figcaption>flowchart.png: the run, from the entry file through the steps to where it ends.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/product-map.png" alt="Product map sheet"><figcaption>product-map.png: what the project is for, what goes in, what comes out, and where it stops.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/data-flow.png" alt="Data flow sheet"><figcaption>data-flow.png: the data path in one direction, file to result.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/statistics.png" alt="Statistics sheet"><figcaption>statistics.png: the counts, drawn as bars you can check against the repo.</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/Epsilon0xCell/Contributing-Template/main/Contributing-Template-Visuals/schematic.png" alt="Schematic sheet"><figcaption>schematic.png: the sixth sheet in the folder. VISUAL.md does not describe it, so I caption it only as what it is, an extra sheet, and I do not invent a description for it.</figcaption></figure>
 </div>
-<footer><span>Built by Epsilon0xCell</span><span>Front sheet ends. The file you want is CONTRIBUTING.md.</span></footer>
+<h2 class="reveal">Credit and adoption</h2>
+<p class="reveal">The guide was generated with <a href="https://generator.contributing.md">generator.contributing.md</a>, and its own attribution line in the file credits the contributing-gen project. To adopt it: copy CONTRIBUTING.md into your project, add a CODE_OF_CONDUCT.md, replace the /issues links with your own issue URLs, point the documentation links at your own documentation, and fill in the four TODO blanks. Until then, the blanks stay blank, including on this page.</p>
+</main>
+<footer>
+<p>Built by Epsilon0xCell. Repository: <a href="https://github.com/Epsilon0xCell/Contributing-Template">github.com/Epsilon0xCell/Contributing-Template</a> · Generator: <a href="https://generator.contributing.md">generator.contributing.md</a> · Author: <a href="https://github.com/Epsilon0xCell">github.com/Epsilon0xCell</a></p>
+</footer>
+<script>
+/* I add the js class first, so content stays complete with JavaScript off, then reveal each row once as it enters view. */
+document.documentElement.classList.add('js');
+(function(){
+var items=document.querySelectorAll('.row, figure, .reveal');
+if(!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in')});return;}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+items.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>
