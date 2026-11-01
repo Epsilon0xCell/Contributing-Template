@@ -6,51 +6,41 @@
 <title>Contributing-Template: The Annotated Blank</title>
 <!-- pages-campaign site for Epsilon0xCell/Contributing-Template; source of truth: Contributing-Template-Website/ on the default branch -->
 <style>
-/* I built this page as a form under annotation: ruled lines for the guide, a tinted margin column for my notes, so the two voices never blur. */
+@font-face{font-family:'Acme';src:url('fonts/Acme-Regular.ttf') format('truetype')}
+@font-face{font-family:'AlegreyaSans';src:url('fonts/AlegreyaSans-Regular.ttf') format('truetype')}
+@font-face{font-family:'AlegreyaSans';src:url('fonts/AlegreyaSans-Bold.ttf') format('truetype');font-weight:bold}
 *{box-sizing:border-box}
-body{margin:0;background:#ece7da;color:#1e1c17;font-family:Georgia,"Times New Roman",serif;line-height:1.6}
-a{color:#7a1f1f}
+body{margin:0;background:linear-gradient(180deg,#5b83b4,#2e4a78 55%,#1d3355);color:#1e1c17;font-family:'AlegreyaSans',sans-serif;line-height:1.6}
+a{color:#2e5d2e}a::before{content:'';display:inline-block;width:.62em;height:.85em;border-radius:50%;background:linear-gradient(180deg,#568a4a 30%,#facd4a 31%);margin-right:.3em;vertical-align:-.08em}
+a:hover::before{background:radial-gradient(circle,#fff2b0 20%,#facd4a 60%,#568a4a 61%)}
 header,main,footer{max-width:1060px;margin:0 auto;padding:0 22px}
-header{padding-top:34px}
-.kicker{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:3px double #1e1c17;padding-bottom:10px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-h1{font-size:40px;line-height:1.08;margin:20px 0 10px;font-weight:normal}
-h2{font-family:Arial,sans-serif;font-size:19px;margin:38px 0 10px;border-bottom:2px solid #1e1c17;padding-bottom:6px}
-.lede{font-size:18px;max-width:44em}
-.badges{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
-.badges img{height:20px}
-.banner{width:100%;display:block;border:1px solid #1e1c17;margin:14px 0}
-.logo{width:110px;height:auto;float:right;margin:4px 0 10px 18px;border:1px solid #1e1c17;background:#fff}
-.note{font-family:"Segoe Print","Bradley Hand",cursive,Georgia,serif;background:#fff3b8;border-left:4px solid #c9a227;padding:10px 14px;font-size:15px}
-.note strong{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
-.form{border:2px solid #1e1c17;background:#fdfcf7}
-.row{display:grid;grid-template-columns:1fr 300px;border-bottom:1px solid #b9b2a0}
-.row:last-child{border-bottom:none}
-.field{padding:16px 18px;border-right:1px solid #b9b2a0}
-.field .num{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.16em;color:#7a1f1f}
-.field h3{margin:3px 0 6px;font-size:20px;font-weight:normal}
-.status{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-.status.written{color:#2e5d2e}.status.blank{color:#7a1f1f}
-.blanklines{margin-top:12px}
-.blanklines i{display:block;height:22px;border-bottom:1px solid #8f8875}
-.blanklines i+i{margin-top:8px}
-.margin{padding:16px;background:#fff8cf;font-family:"Segoe Print","Bradley Hand",cursive,Georgia,serif;font-size:14.5px;border-left:3px solid #c9a227}
-.margin::before{content:"My note";display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7a6a1f;margin-bottom:4px}
-@media(max-width:720px){.row{grid-template-columns:1fr}.field{border-right:none}.margin{border-left:none;border-top:3px solid #c9a227}}
-figure{margin:18px 0}
-figure img{width:100%;display:block;border:1px solid #1e1c17;background:#fff}
+header{padding-top:34px;color:#f6f4ec}header a{color:#ffe9a8}
+.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:3px double #f6f4ec;padding-bottom:10px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+h1{font-family:'Acme',sans-serif;font-size:44px;line-height:1.08;margin:20px 0 10px}
+h2{font-family:'Acme',sans-serif;font-size:24px;margin:44px 0 12px;color:#f6f4ec;border-bottom:6px dotted #facd4a;padding-bottom:8px}
+.lede{font-size:18px;max-width:44em}.badges{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.badges img{height:20px}.badges a::before{content:none}
+.banner{width:100%;display:block;border:2px solid #f6f4ec;margin:14px 0}
+.logo{width:110px;height:auto;float:right;margin:4px 0 10px 18px;border:2px solid #f6f4ec;background:#fff}
+.note{background:#fff3b8;border-left:5px solid #facd4a;padding:10px 14px;font-size:15px;color:#1e1c17}
+.note strong{font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+main{background:#f6f4ec;border-radius:14px 14px 0 0;padding-top:8px;padding-bottom:20px;margin-top:26px}
+main h2{color:#2e4a78}
+.form{border:2px solid #6e5c46;background:#fdfcf7}
+.row{display:grid;grid-template-columns:1fr 300px;border-bottom:1px solid #b9b2a0}.row:last-child{border-bottom:none}
+.field{padding:16px 18px;border-right:1px solid #b9b2a0}.field .num{font-size:11px;letter-spacing:.16em;color:#7a4a1f}
+.field h3{font-family:'Acme',sans-serif;margin:3px 0 6px;font-size:21px}
+.status{font-size:11px;letter-spacing:.12em;text-transform:uppercase}.status.written{color:#2e5d2e}.status.blank{color:#a34a12}
+.blanklines{margin-top:12px}.blanklines i{display:block;height:22px;border-bottom:1px solid #8f8875}.blanklines i+i{margin-top:8px}
+.margin{padding:16px;background:#eef3e4;font-size:14.5px;border-left:4px solid #568a4a}
+.margin::before{content:"Lantern note";display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#2e5d2e;margin-bottom:4px}
+@media(max-width:720px){.row{grid-template-columns:1fr}.field{border-right:none}.margin{border-left:none;border-top:4px solid #568a4a}}
+figure{margin:18px 0}figure img{width:100%;display:block;border:2px solid #6e5c46;background:#fff}
 figcaption{font-size:13.5px;color:#4a463c;margin-top:6px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:720px){.grid2{grid-template-columns:1fr}}
-pre{background:#1e1c17;color:#f2ecd9;padding:16px 18px;overflow-x:auto;font-size:13.5px;line-height:1.55}
-pre .ln{color:#9a927a;user-select:none}
-.caplabel{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7a1f1f;margin-top:22px}
-.todo-blank:hover .blanklabel{text-decoration:underline}
-footer{border-top:3px double #1e1c17;margin-top:44px;padding-top:16px;padding-bottom:34px;font-size:14px}
-.js .row,.js figure,.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-.js .row.in,.js figure.in,.js .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-.js .row,.js figure,.js .reveal{opacity:1;transform:none;transition:none}
-}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+pre{background:#1d3355;color:#f2ecd9;padding:16px 18px;overflow-x:auto;font-size:13.5px;line-height:1.55}
+pre .ln{color:#9db3cc;user-select:none}
+.caplabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7a4a1f;margin-top:22px}
+footer{border-top:3px double #f6f4ec;margin-top:0;padding-top:16px;padding-bottom:34px;font-size:14px;color:#f6f4ec}footer a{color:#ffe9a8}
 </style>
 </head>
 <body>
